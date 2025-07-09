@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isshin Sushi - Restaurant Japonais & Coréen</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="top"></div>
+    <div class="up">
+      <a href="#top"
+        ><img
+          src="./img/arrow_upward_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Flèche haut"
+      /></a>
+    </div>
+
+    <header id="header">
+      <a href="./index.html">ACCUEIL</a>
+      <a href="./menu.html">NOTRE CARTE</a>
+      <a href="./gallerie.html">GALLERIE</a>
+      <a href="./contact.html">CONTACT & INFOS</a>
+      <div class="mobile-toggle" id="mobileToggle">☰</div>
+    </header>
+
+    <section class="page1">
+      <img
+        src="https://www.isshinsushi.ch/wp-content/uploads/2017/09/Original.png"
+        alt="Logo Isshin"
+      />
+      <p>
+        TEL : 0216248221 <br />
+        ADRESSE: Pl. Chauderon 30, <br />1003 Lausanne <br />
+        E-MAIL : contact@isshin.ch
+      </p>
+      <div>
+        <img
+          src="./img/arrangement-de-sushis-plats-avec-espace-de-copie.jpg"
+          alt="Plat de sushi assortiment"
+          id="heroImage"
+        />
+      </div>
+    </section>
+
+    <section class="plats">
+      <h1>NOS PLATS PHARES</h1>
+      <div class="plats-grid">
+        <div class="plat-item fade-in">
+          <img src="./img/shushiPlat.png" alt="Sushis" />
+          <p>SUSHIS</p>
+        </div>
+        <div class="plat-item fade-in">
+          <img src="./img/bibimbap.jpg" alt="Bibimbap" />
+          <p>BIBIMBAP</p>
+        </div>
+        <div class="plat-item fade-in">
+          <img src="./img/gyoza.jpg" alt="Gyoza" />
+          <p>GYOZA</p>
+        </div>
+        <div class="plat-item fade-in">
+          <img src="./img/Ramen.webp" alt="Ramen" />
+          <p>RAMEN</p>
+        </div>
+        <div class="plat-item fade-in">
+          <img src="./img/Udon.jpg" alt="Udon" />
+          <p>UDON</p>
+        </div>
+        <div class="plat-item fade-in">
+          <img src="./img/Kimchi.jpg" alt="Soupes" />
+          <p>Kimchi</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="btn">
+      <a href="./menu.html">Menu complet</a>
+    </div>
+
+    <section class="salle">
+      <div>
+        <p>
+          NOTRE DEVISE : <br /><br />
+          <span
+            >Offrir une qualité artisanale, une expertise remarquable et
+            dépasser les attentes de nos clients.</span
+          >
+          <br /><br />
+          Le nom "Isshin", qui signifie "du cœur" ou "un seul cœur" en japonais,
+          reflète notre passion.
+          <br /><br />
+          Nous sommes spécialisés dans une cuisine maison alliant sushi japonais
+          et saveurs coréennes.
+        </p>
+      </div>
+      <img src="./img/interieur.jpg" alt="Restaurant Isshin Intérieur" />
+    </section>
+
+    <section class="infos">
+      <h1>Réservation et Livraison</h1>
+      <div class="info-container">
+        <div class="info-item fade-in">
+          <h2>Livraison</h2>
+          <p>
+            Nous livrons exclusivement via <strong>UberEats</strong> pour vous
+            garantir un service rapide et fiable.
+          </p>
+        </div>
+        <div class="info-item fade-in">
+          <h2>Réservation</h2>
+          <p>
+            Pour réserver une table ou commander à emporter, appelez-nous
+            directement au 0216248221.
+          </p>
+        </div>
+        <div class="info-item fade-in">
+          <h2>Réduction</h2>
+          <p>
+            Bénéficiez de <strong>10% de réduction</strong> sur toutes les
+            commandes à emporter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <img
+          src="https://www.isshinsushi.ch/wp-content/uploads/2017/09/Original.png"
+          alt="Logo Isshin"
+          class="footer-logo"
+        />
+        <div class="contact-info">
+          <p>
+            TEL : 0216248221 | ADRESSE: Pl. Chauderon 30, 1003 Lausanne | E-MAIL
+            : contact@isshin.ch
+          </p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"
+            ><img src="./img/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="./img/instagram.png" alt="Instagram"
+          /></a>
+        </div>
+        <p class="copyright">© 2025 Isshin Sushi. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Navigation Mobile Toggle
+      const mobileToggle = document.getElementById("mobileToggle");
+      const header = document.getElementById("header");
+
+      mobileToggle.addEventListener("click", () => {
+        header.classList.toggle("active");
+      });
+
+      // Animation au défilement
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        fadeElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Flèche de retour en haut
+        const upButton = document.querySelector(".up");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            upButton.classList.add("visible");
+          } else {
+            upButton.classList.remove("visible");
+          }
+        });
+      });
+
+      // Défilement fluide
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
